@@ -1,4 +1,4 @@
-import { Maze } from "./entities/Maze";
+import { Maze } from "../entities/Maze";
 import { MazeGame } from "./MazeGame";
 import { StandardMazeBuilder } from "./StandardMazeBuilder";
 

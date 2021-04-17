@@ -1,4 +1,4 @@
-import { Maze } from "./entities/Maze";
+import { Maze } from "../entities/Maze";
 import { MazeBuilder } from "./MazeBuilder";
 
 export class MazeGame {

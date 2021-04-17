@@ -1,4 +1,5 @@
 import { Room } from "./Room";
+import { MapSite } from "./Mapsite";
 
 export class Door extends MapSite {
 
@@ -6,6 +7,7 @@ export class Door extends MapSite {
 
     constructor(private room1?: Room, private room2?: Room) {
         super();
+        this.isOpen = false;
     }
 
     public enter(): void {
@@ -15,12 +17,8 @@ export class Door extends MapSite {
     public otherSideRoom(room: Room): Room {
         if (room == this.room1)
             return this.room2;
-        else if (room = this.room2) {
+        else {
             return this.room2;
         }
-        return null;
     }
-
-
-
 }

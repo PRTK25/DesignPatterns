@@ -1,3 +1,3 @@
-abstract class MapSite{
+export abstract class MapSite{
     public abstract enter():void; 
 }

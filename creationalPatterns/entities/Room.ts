@@ -1,4 +1,5 @@
 import { Direction } from "./Directions";
+import {MapSite} from "./Mapsite";
 
 export class Room extends MapSite {
 

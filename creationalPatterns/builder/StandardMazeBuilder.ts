@@ -1,7 +1,8 @@
-import { Direction } from "./entities/Directions";
-import { Door } from "./entities/Door";
-import { Maze } from "./entities/Maze";
-import { Room } from "./entities/Room";
+import { Direction } from "../entities/Directions";
+import { Door } from "../entities/Door";
+import { Maze } from "../entities/Maze";
+import { Room } from "../entities/Room";
+import { Wall } from "../entities/Wall";
 import { MazeBuilder } from "./MazeBuilder";
 
 export class StandardMazeBuilder implements MazeBuilder {
