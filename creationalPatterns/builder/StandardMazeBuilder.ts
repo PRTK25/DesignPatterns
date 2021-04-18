@@ -7,18 +7,20 @@ import { MazeBuilder } from "./MazeBuilder";
 
 export class StandardMazeBuilder implements MazeBuilder {
 
-    private currentMaze: Maze;
+    private currentMaze: Maze | null;
 
     constructor() {
         this.currentMaze = null;
     }
 
     buildDoor(roomFrom: number, roomTo: number): void {
-        const r1:Room = this.currentMaze.getRoom(roomFrom);
-        const r2:Room = this.currentMaze.getRoom(roomTo);
-        const d = new Door(r1,r2);
-        r1.setSide(this.commonWall(r1,r2),d);
-        r2.setSide(this.commonWall(r1,r2),d);
+        if (this.currentMaze != null) {
+            const r1: Room = this.currentMaze.getRoom(roomFrom);
+            const r2: Room = this.currentMaze.getRoom(roomTo);
+            const d = new Door(r1, r2);
+            r1.setSide(this.commonWall(r1, r2), d);
+            r2.setSide(this.commonWall(r1, r2), d);
+        }
     }
 
     buildMaze(): void {
@@ -28,7 +30,7 @@ export class StandardMazeBuilder implements MazeBuilder {
 
 
     buildRoom(n: number): void {
-        if (this.currentMaze.getRoom(n) != null) {
+        if (this.currentMaze != null && this.currentMaze.getRoom(n) != null) {
             const room = new Room(n);
             this.currentMaze.addRoom(room);
 
@@ -40,13 +42,13 @@ export class StandardMazeBuilder implements MazeBuilder {
         }
     }
 
-    getMaze(): Maze {
+    getMaze(): Maze | null {
         return this.currentMaze;
     }
 
-    private commonWall(room1:Room, room2:Room): Direction{
+    private commonWall(room1: Room, room2: Room): Direction {
         let w: Wall;
-        return null;
+        return Direction.East;
     }
 
 

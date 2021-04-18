@@ -14,7 +14,7 @@ export class Door extends MapSite {
         throw new Error("Method not implemented.");
     }
 
-    public otherSideRoom(room: Room): Room {
+    public otherSideRoom(room: Room): Room | undefined{
         if (room == this.room1)
             return this.room2;
         else {

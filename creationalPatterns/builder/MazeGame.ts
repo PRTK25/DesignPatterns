@@ -2,7 +2,7 @@ import { Maze } from "../entities/Maze";
 import { MazeBuilder } from "./MazeBuilder";
 
 export class MazeGame {
-    public createMaze(builder: MazeBuilder): Maze {
+    public createMaze(builder: MazeBuilder): Maze | null {
         builder.buildMaze();
         builder.buildRoom(1);
         builder.buildRoom(2);

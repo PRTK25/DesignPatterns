@@ -4,4 +4,4 @@ import { StandardMazeBuilder } from "./StandardMazeBuilder";
 
 const game:MazeGame = new MazeGame();
 const builder:StandardMazeBuilder = new StandardMazeBuilder();
-const maze:Maze = game.createMaze(builder);
+const maze = game.createMaze(builder);

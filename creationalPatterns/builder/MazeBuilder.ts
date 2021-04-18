@@ -1,5 +1,6 @@
 import { Maze } from "../entities/Maze";
 
+//builder interface provides methods to build
 export interface MazeBuilder {
 
     buildMaze(): void;
@@ -8,6 +9,6 @@ export interface MazeBuilder {
 
     buildDoor(roomFrom: number, roomTo: number): void;
 
-    getMaze(): Maze;
+    getMaze(): Maze | null;
 
 }
